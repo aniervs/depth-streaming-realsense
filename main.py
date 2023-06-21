@@ -11,6 +11,12 @@ config = rs.config()
 config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
 config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
 
+decimation_scale = float(input('Enter the decimation scale [1, 8]. The default value is 2.000: '))
+assert 1 <= decimation_scale <= 8, "Decimation scale is out of range [1, 8]!"
+
+decimation = rs.decimation_filter()
+decimation.set_option(rs.option.filter_magnitude, decimation_scale)
+
 pipeline.start(config)
 
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
@@ -24,11 +30,15 @@ try:
         color_frame = frames.get_color_frame()
         depth_frame = frames.get_depth_frame()
 
+        depth_frame = decimation.process(depth_frame)
+
         if not color_frame or not depth_frame:
             continue
 
         color_image = np.asanyarray(color_frame.get_data())
         depth_image = np.asanyarray(depth_frame.get_data())
+
+        depth_image = cv2.resize(depth_image, (color_image.shape[1], color_image.shape[0]))
 
         if video_writer_rgb is None or video_writer_depth is None:
             height_rgb, width_rgb = color_image.shape[:2]

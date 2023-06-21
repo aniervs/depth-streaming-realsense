@@ -33,7 +33,7 @@ This repository contains a Python script that uses the Intel RealSense camera to
 
 ## TODO
 - Support for post-processing filters from the realsense viewer: 
-  - [ ] Decimation filter
+  - [x] Decimation filter
   - [ ] HDR Merge
   - [ ] Filter by Sequence id
   - [ ] Threshold Filter

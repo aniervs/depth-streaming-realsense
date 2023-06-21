@@ -31,6 +31,17 @@ This repository contains a Python script that uses the Intel RealSense camera to
 
 4. The captured video will be saved as 'output.mp4' in the project directory.
 
+## TODO
+- Support for post-processing filters from the realsense viewer: 
+  - [ ] Decimation filter
+  - [ ] HDR Merge
+  - [ ] Filter by Sequence id
+  - [ ] Threshold Filter
+  - [ ] Depth to Disparity
+  - [ ] Spatial Filter
+  - [ ] Temporal Filter
+  - [ ] Hole Filling Filter
+  - [ ] Disparity to Depth
 
 ## Acknowledgements
 

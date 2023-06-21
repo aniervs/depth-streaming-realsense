@@ -3,8 +3,8 @@ import cv2
 import numpy as np
 
 filename = input('Enter output file name: ')
-rgb_video = filename + ".mp4"
-depth_video = filename + "_depth.mp4"
+rgb_video = "data/" + filename + ".mp4"
+depth_video = "data/" + filename + "_depth.mp4"
 
 pipeline = rs.pipeline()
 config = rs.config()

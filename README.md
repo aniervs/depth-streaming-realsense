@@ -1,6 +1,6 @@
 # RealSense Video Capture
 
-This repository contains a Python script that uses the Intel RealSense camera to capture video with color and depth information. The captured video is saved to a file while displaying the frames in real-time using OpenCV.
+This repository contains code that uses the Intel RealSense camera to capture video with color and depth information. The captured videos are saved to a file while displaying the frames in real-time using OpenCV.
 
 ## Dependencies
 
@@ -13,26 +13,26 @@ This repository contains a Python script that uses the Intel RealSense camera to
 
 1. Clone this repository:
 
-```git clone https://github.com/aniervs/depth-streaming-realsense.git```
+```Bash
+git clone https://github.com/aniervs/depth-streaming-realsense.git
+```
  
 2. Install the required dependencies using pip:
 
-``pip install pyrealsense2 opencv-python numpy``
+```Bash
+pip install pyrealsense2 opencv-python numpy
+```
  
 3. Connect the Intel RealSense camera to your computer.
 
 ## Usage
 
-1. Navigate to the project directory:
-```cd depth-streaming-realsense.git```
-2. Run the script:
-```python main.py``` 
+1. Set the preprocessing settings you want for the recordings on the 'settings.json' file.
+2. Run the 'main.py' file to start recording.
 3. The script will start capturing video from the RealSense camera. Press 'q' to stop the capture.
+4. The recordings will be stored under the 'data' folder, where you'll have two videos: one with the color image and another with the depth image.
 
-4. The captured video will be saved as 'output.mp4' in the project directory.
-
-## TODO
-- Support for post-processing filters from the realsense viewer: 
+## Supported post-processing filters 
   - [x] Decimation filter
   - [ ] HDR Merge
   - [ ] Filter by Sequence id

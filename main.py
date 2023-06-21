@@ -11,7 +11,7 @@ config = rs.config()
 config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
 config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
 
-decimation_scale = float(input('Enter the decimation scale [1, 8]. The default value is 2.000: '))
+decimation_scale = int(input('Enter the decimation scale [1-8]. (Default value is 2): '))
 assert 1 <= decimation_scale <= 8, "Decimation scale is out of range [1, 8]!"
 
 decimation = rs.decimation_filter()

@@ -36,10 +36,10 @@ This repository contains a Python script that uses the Intel RealSense camera to
   - [x] Decimation filter
   - [ ] HDR Merge
   - [ ] Filter by Sequence id
-  - [ ] Threshold Filter
+  - [x] Threshold Filter
   - [ ] Depth to Disparity
-  - [ ] Spatial Filter
-  - [ ] Temporal Filter
+  - [x] Spatial Filter
+  - [x] Temporal Filter
   - [ ] Hole Filling Filter
   - [ ] Disparity to Depth
 

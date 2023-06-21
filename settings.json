@@ -1,0 +1,30 @@
+{
+  "Depth": {
+    "Decimation Filter": {
+    "enabled": true,
+    "filter_magnitude": 2
+    },
+    "Threshold Filter": {
+      "enabled": true,
+      "min_distance": 0.1,
+      "max_distance": 4.0
+    },
+    "Spatial Filter": {
+      "enabled": true,
+      "filter_magnitude": 2,
+      "filter_smooth_alpha": 0.5,
+      "filter_smooth_delta": 20
+    },
+    "Temporal Filter": {
+      "enabled": true,
+      "filter_smooth_alpha": 0.4,
+      "filter_smooth_delta": 20
+    }
+  },
+  "RGB": {
+    "Decimation Filter": {
+      "enabled": true,
+      "filter_magnitude": 8
+    }
+  }
+}

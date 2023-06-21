@@ -13,7 +13,7 @@ This repository contains a Python script that uses the Intel RealSense camera to
 
 1. Clone this repository:
 
-```git clone https://github.com/your-username/realsense-video-capture.git```
+```git clone https://github.com/aniervs/depth-streaming-realsense.git```
  
 2. Install the required dependencies using pip:
 

@@ -24,7 +24,7 @@ This repository contains a Python script that uses the Intel RealSense camera to
 ## Usage
 
 1. Navigate to the project directory:
-```cd realsense-video-capture```
+```cd depth-streaming-realsense.git```
 2. Run the script:
 ```python main.py``` 
 3. The script will start capturing video from the RealSense camera. Press 'q' to stop the capture.

@@ -48,14 +48,11 @@ try:
             break
 
 finally:
-    # Stop the RealSense pipeline
     pipeline.stop()
 
-    # Release the video writer
     if video_writer_rgb is not None and video_writer_depth:
         video_writer_rgb.release()
         video_writer_depth.release()
 
-    # Close all OpenCV windows
     cv2.destroyAllWindows()
 

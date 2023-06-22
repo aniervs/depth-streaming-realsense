@@ -2,25 +2,19 @@
 
 This repository contains code that uses the Intel RealSense camera to capture video with color and depth information. The captured videos are saved to a file while displaying the frames in real-time using OpenCV.
 
-## Dependencies
-
-- Python 3
-- pyrealsense2
-- OpenCV
-- NumPy
-
 ## Installation
 
-1. Clone this repository:
+1. Clone this repository and navigate to the project folder:
 
 ```Bash
-git clone https://github.com/aniervs/depth-streaming-realsense.git
+git clone https://github.com/aniervs/depth-streaming-realsense.git && cd depth-streaming-realsense
 ```
- 
-2. Install the required dependencies using pip:
+2. Create a virtual environment and install the dependencies:
 
 ```Bash
-pip install pyrealsense2 opencv-python numpy
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
  
 3. Connect the Intel RealSense camera to your computer.
@@ -42,11 +36,3 @@ pip install pyrealsense2 opencv-python numpy
   - [x] Temporal Filter
   - [ ] Hole Filling Filter
   - [ ] Disparity to Depth
-
-## Acknowledgements
-
-- [Intel RealSense SDK](https://github.com/IntelRealSense/librealsense)
-- [OpenCV](https://opencv.org/)
-- [NumPy](https://numpy.org/)
-
-
